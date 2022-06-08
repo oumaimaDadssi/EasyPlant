@@ -1,0 +1,441 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{885D13B3-96DA-4AD8-860F-5844A4CA5162}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EasyPlants</RootNamespace>
+    <AssemblyName>EasyPlants</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.WinControls, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>lib\RCWF\2020.1.218.40\Telerik.WinControls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.GridView, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.RichTextEditor, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.UI, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>lib\RCWF\2020.1.218.40\Telerik.WinControls.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TelerikCommon, Version=2020.1.218.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>lib\RCWF\2020.1.218.40\TelerikCommon.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Consignes\Achat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consignes\Achat.Designer.cs">
+      <DependentUpon>Achat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consignes\Etatcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consignes\Etatcs.Designer.cs">
+      <DependentUpon>Etatcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consignes\Retour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consignes\Retour.Designer.cs">
+      <DependentUpon>Retour.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consignes\Sortie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consignes\Sortie.Designer.cs">
+      <DependentUpon>Sortie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Livraison\BonLivraison.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Livraison\BonLivraison.Designer.cs">
+      <DependentUpon>BonLivraison.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paramétrage\Coordonnees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paramétrage\Coordonnees.Designer.cs">
+      <DependentUpon>Coordonnees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paramétrage\ListeTier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paramétrage\ListeTier.Designer.cs">
+      <DependentUpon>ListeTier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paramétrage\DoubleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paramétrage\DoubleForm.Designer.cs">
+      <DependentUpon>DoubleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paramétrage\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paramétrage\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParametrageBase.cs" />
+    <Compile Include="Paramétrage\Famille.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paramétrage\Famille.Designer.cs">
+      <DependentUpon>Famille.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Planning\Planning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Planning\Planning.Designer.cs">
+      <DependentUpon>Planning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paramétrage\PorteGref.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paramétrage\PorteGref.designer.cs">
+      <DependentUpon>PorteGref.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paramétrage\Utilisateur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paramétrage\Utilisateur.Designer.cs">
+      <DependentUpon>Utilisateur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyPub.cs" />
+    <Compile Include="Production\Avance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\Avance.Designer.cs">
+      <DependentUpon>Avance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\Commande.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\Commande.designer.cs">
+      <DependentUpon>Commande.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\ReceptionSemence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\ReceptionSemence.Designer.cs">
+      <DependentUpon>ReceptionSemence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\RservationConsigne.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\RservationConsigne.Designer.cs">
+      <DependentUpon>RservationConsigne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stock\AjoutArticle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock\AjoutArticle.Designer.cs">
+      <DependentUpon>AjoutArticle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stock\EtatStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock\EtatStock.Designer.cs">
+      <DependentUpon>EtatStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuiviCommandes\SuiviCommande.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuiviCommandes\SuiviCommande.Designer.cs">
+      <DependentUpon>SuiviCommande.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Consignes\Achat.resx">
+      <DependentUpon>Achat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consignes\Etatcs.resx">
+      <DependentUpon>Etatcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consignes\Retour.resx">
+      <DependentUpon>Retour.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consignes\Sortie.resx">
+      <DependentUpon>Sortie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Livraison\BonLivraison.resx">
+      <DependentUpon>BonLivraison.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paramétrage\Coordonnees.resx">
+      <DependentUpon>Coordonnees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paramétrage\ListeTier.resx">
+      <DependentUpon>ListeTier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paramétrage\DoubleForm.resx">
+      <DependentUpon>DoubleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paramétrage\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paramétrage\PointVente.resx">
+      <DependentUpon>PointVente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paramétrage\Famille.resx">
+      <DependentUpon>Famille.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paramétrage\PorteGref.resx">
+      <DependentUpon>PorteGref.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paramétrage\Variete.resx">
+      <DependentUpon>Variete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planning\Planning.resx">
+      <DependentUpon>Planning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\Commande.resx">
+      <DependentUpon>Commande.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\ReceptionSemence.resx">
+      <DependentUpon>ReceptionSemence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\RservationConsigne.resx">
+      <DependentUpon>RservationConsigne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <Compile Include="Paramétrage\PointVente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paramétrage\PointVente.Designer.cs">
+      <DependentUpon>PointVente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paramétrage\Variete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paramétrage\Variete.designer.cs">
+      <DependentUpon>Variete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Paramétrage\Utilisateur.resx">
+      <DependentUpon>Utilisateur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock\AjoutArticle.resx">
+      <DependentUpon>AjoutArticle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock\EtatStock.resx">
+      <DependentUpon>EtatStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuiviCommandes\SuiviCommande.resx">
+      <DependentUpon>SuiviCommande.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <!--sirinie -->
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 et x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icons\Button-power-icon %281%29.png" />
+    <Content Include="Icons\Button-power-icon %282%29.png" />
+    <Content Include="Icons\Button-power-icon.png" />
+    <Content Include="Icons\Check-2-icon %281%29.png" />
+    <Content Include="Icons\Check-2-icon %282%29.png" />
+    <Content Include="Icons\Check-2-icon %283%29.png" />
+    <Content Include="Icons\Check-2-icon.png" />
+    <Content Include="Icons\Database-Active-icon %281%29.png" />
+    <Content Include="Icons\Database-Active-icon.png" />
+    <Content Include="Icons\Database-Cloud-icon %281%29.png" />
+    <Content Include="Icons\Database-Cloud-icon %282%29.png" />
+    <Content Include="Icons\Database-Cloud-icon.png" />
+    <Content Include="Icons\database-icon %281%29.png" />
+    <Content Include="Icons\database-icon %282%29.png" />
+    <Content Include="Icons\database-icon.png" />
+    <Content Include="Icons\greenhouse-5050163_960_720.png" />
+    <Content Include="Icons\icon\013-log-out.png" />
+    <Content Include="Icons\icon\045-database-storage.png" />
+    <Content Include="Icons\icon\Add-icon %281%29.png" />
+    <Content Include="Icons\icon\App-utilities-icon %281%29.png" />
+    <Content Include="Icons\icon\btnLogin.png" />
+    <Content Include="Icons\icon\datasetting %281%29.png" />
+    <Content Include="Icons\icon\datasetting.png" />
+    <Content Include="Icons\icon\easylogo.ico" />
+    <Content Include="Icons\icon\enregistrer.png" />
+    <Content Include="Icons\icon\imprimer.jpg" />
+    <Content Include="Icons\icon\keylogin.png" />
+    <Content Include="Icons\icon\logo.png" />
+    <Content Include="Icons\icon\nouveau.png" />
+    <Content Include="Icons\icon\profil.png" />
+    <Content Include="Icons\icon\profile.png" />
+    <Content Include="Icons\icon\quiter.png" />
+    <Content Include="Icons\icon\quiterrouge.png" />
+    <Content Include="Icons\icon\return.png" />
+    <Content Include="Icons\key-icon.png" />
+    <Content Include="Icons\keys-icon %281%29.png" />
+    <Content Include="Icons\keys-icon %282%29.png" />
+    <Content Include="Icons\keys-icon.png" />
+    <Content Include="Icons\man-icon %281%29.png" />
+    <Content Include="Icons\man-icon.png" />
+    <Content Include="Icons\Microsoft-DataBase-Demon-icon %281%29.png" />
+    <Content Include="Icons\Microsoft-DataBase-Demon-icon %282%29.png" />
+    <Content Include="Icons\Microsoft-DataBase-Demon-icon.png" />
+    <Content Include="Icons\Open-folder-add-icon.png" />
+    <Content Include="Icons\Percentage-icon %281%29.png" />
+    <Content Include="Icons\percentage-icon %2810%29.png" />
+    <Content Include="Icons\percentage-icon %2811%29.png" />
+    <Content Include="Icons\Percentage-icon %282%29.png" />
+    <Content Include="Icons\Percentage-icon %283%29.png" />
+    <Content Include="Icons\percentage-icon %284%29.png" />
+    <Content Include="Icons\percentage-icon %285%29.png" />
+    <Content Include="Icons\percentage-icon %286%29.png" />
+    <Content Include="Icons\percentage-icon %287%29.png" />
+    <Content Include="Icons\percentage-icon %288%29.png" />
+    <Content Include="Icons\percentage-icon %289%29.png" />
+    <Content Include="Icons\Percentage-icon.png" />
+    <Content Include="Icons\person-icon %281%29.png" />
+    <Content Include="Icons\person-icon %282%29.png" />
+    <Content Include="Icons\person-icon.png" />
+    <Content Include="Icons\power-icon.png" />
+    <Content Include="Icons\process-accept-icon %281%29.png" />
+    <Content Include="Icons\process-accept-icon %282%29.png" />
+    <Content Include="Icons\process-accept-icon %283%29.png" />
+    <Content Include="Icons\process-accept-icon.png" />
+    <Content Include="Icons\Search-icon %281%29.png" />
+    <Content Include="Icons\Search-icon %282%29.png" />
+    <Content Include="Icons\Search-icon.png" />
+    <Content Include="Icons\Settings-icon %281%29.png" />
+    <Content Include="Icons\Settings-icon %282%29.png" />
+    <Content Include="Icons\Settings-icon.png" />
+    <Content Include="Icons\stack-icon.png" />
+    <Content Include="Icons\tea-plant-leaf-icon %281%29.png" />
+    <Content Include="Icons\tea-plant-leaf-icon %282%29.png" />
+    <Content Include="Icons\tea-plant-leaf-icon %283%29.png" />
+    <Content Include="Icons\tea-plant-leaf-icon.png" />
+    <Content Include="Icons\User-group-icon %281%29.png" />
+    <Content Include="Icons\User-group-icon %282%29.png" />
+    <Content Include="Icons\User-group-icon.png" />
+    <Content Include="Icons\User-icon %281%29.png" />
+    <Content Include="Icons\User-icon %282%29.png" />
+    <Content Include="Icons\User-icon.png" />
+    <Content Include="Icons\Users-icon %281%29.png" />
+    <Content Include="Icons\Users-icon %282%29.png" />
+    <Content Include="Icons\Users-icon %283%29.png" />
+    <Content Include="Icons\Users-icon %284%29.png" />
+    <Content Include="Icons\Users-icon.png" />
+    <Content Include="Icons\windows-7-user-icon %281%29.png" />
+    <Content Include="Icons\windows-7-user-icon.png" />
+    <Content Include="Icons\zoom-in-icon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties ShouldAddDPIScalingManifest="True" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
